@@ -3,14 +3,14 @@ import animeVideo from "../assets/animeVideo.mp4";
 function Home() {
   const [start, setStart] = useState(false);
   return (
-    <div className="grid grid-cols-2 w-full">
-      <div className="left flex-col flex items-center justify-center">
-        <p className="font-bold text-4xl">
-          <span className="text-5xl">F</span>ace{" "}
-          <span className="text-5xl">R</span>ecogonization
+    <div className="grid grid-cols-1 md:grid-cols-2 w-full">
+      <div className="left flex-col flex items-center justify-center order-2 md:order-1">
+        <p className="font-bold text-2xl md:text-4xl">
+          <span className="text-2xl md:text-5xl">F</span>ace{" "}
+          <span className="text-2xl md:text-5xl">R</span>ecogonization
         </p>
 
-        <p className="text-2xl m-12 hyphens-auto">
+        <p className="text-2xl m-12 text-center hyphens-auto">
           Here you can able to Recgonize the Face with the Basic operation
         </p>
         <button
@@ -22,7 +22,7 @@ function Home() {
           </p>
         </button>
       </div>
-      <div className="right flex-col flex items-center justify-center">
+      <div className="right flex-col flex items-center justify-center md:order-2">
         {start ? (
           <>
             {/* <img src="" alt="img will Loaded" /> */}
@@ -35,7 +35,7 @@ function Home() {
           </>
         ) : (
           <div className=" ">
-            <div className="group w-4/5 relative transition-all ease-in-out duration-500">
+            <div className="group w-4/5 mx-auto relative transition-all ease-in-out duration-500">
               <video
                 className="rounded-xl shadow-md shadow-neutral-500 group-hover:blur-xs"
                 loop
